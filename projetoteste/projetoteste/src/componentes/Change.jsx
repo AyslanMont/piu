@@ -1,11 +1,22 @@
 import { useState } from "react";
 
 export default function Change() {
-  //   let valor = 0;
-  let [valor, setValor] = useState(0);
+  const [valor, setValor] = useState(0);
+  const [dezena, setDezena] = useState(0);
+  
+  const handleClick = () => {
+    const newValor = valor + 1;
+    setValor(newValor);
+    
+    if (newValor % 10 === 0) {
+      setDezena(newValor / 10);
+    }
+  };
+
   return (
     <div>
-      <button onClick={() => setValor(valor + 1)}>{valor} Clique aqui</button>
+      <button onClick={handleClick}>{valor} Clique aqui</button>
+      <p>Dezenas: {dezena}</p>
     </div>
   );
 }
