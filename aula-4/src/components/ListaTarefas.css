@@ -1,0 +1,12 @@
+.tarefas {
+
+}
+
+.tarefas li{
+    list-style: None;
+}
+
+
+.tarefas div {
+    border: 2px solid white;
+}
